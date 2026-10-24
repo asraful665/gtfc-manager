@@ -1,0 +1,12 @@
+GTFC reconnect/login fix
+
+1) Stop the current Node server with Ctrl+C in its terminal.
+2) In the existing app folder, copy the current index.html and server.js to a backup folder.
+3) Copy these two files from this package into the same app folder, replacing only index.html and server.js.
+4) Do NOT replace config.json, club-data.json, users.json, sessions.json, or other data files.
+5) Start the same Node server command you normally use.
+6) Open https://gtfc.roborovski-pauling.ts.net/ and sign in if redirected to /login.
+
+Changes: sessions are written to disk immediately; if the session is genuinely invalid, the app redirects to login instead of staying offline; polling automatically shows online again after server returns when the session remains valid.
+
+Do not share config.json or passwords. Keep your existing data files.
